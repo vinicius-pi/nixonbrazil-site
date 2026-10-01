@@ -1,9 +1,10 @@
 import {readFile,readdir,lstat} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {join} from 'node:path';
+import {validateRelease} from './public-health.mjs';
 
 const release=JSON.parse(await readFile('release.json','utf8'));
-if(release.version!==1||release.domain!=='nixonbrazil.page'||!/^[a-f0-9]{40}$/.test(release.source_commit)||release.source_ref!=='refs/heads/main'||!['local','github-actions'].includes(release.build?.method))throw new Error('Missing release identity');
+validateRelease(release);
 async function walk(root,prefix=''){
  const paths=[];
  for(const name of await readdir(join(root,prefix))){

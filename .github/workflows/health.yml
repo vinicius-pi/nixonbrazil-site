@@ -1,0 +1,29 @@
+name: Verificar site público
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 12 * * *'
+
+permissions:
+  contents: read
+  deployments: read
+
+concurrency:
+  group: public-health
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Testar a verificação, incluindo respostas incorretas
+        run: node --test scripts/health-check.test.mjs
+      - name: Conferir a edição realmente publicada
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/check-public.mjs --deployed

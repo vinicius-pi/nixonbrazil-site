@@ -1,16 +1,24 @@
-const origin='https://nixonbrazil.page';
-for(const [path,marker] of [['/','<title>nixonbrazil</title>'],['/artigos/abertura-china/','nixonbrazil'],['/acervo/','nixonbrazil'],['/rss.xml','<rss'],['/sitemap.xml','<urlset']]){
- const response=await fetch(origin+path,{signal:AbortSignal.timeout(15000)});
- if(response.status!==200||!response.url.startsWith(origin+'/'))throw new Error(path+': '+response.status+' '+response.url);
- const text=await response.text();if(!text.includes(marker))throw new Error(path+': wrong content');
- console.log('200 '+path);
- if(path==='/'){
-  for(const match of text.matchAll(/(?:href|src)="(\/(?:_astro|scripts)\/[^"?#]+)"/g)){
-   const asset=await fetch(origin+match[1],{signal:AbortSignal.timeout(15000)});
-   if(asset.status!==200)throw new Error('Missing asset: '+match[1]);
+import {readFile, appendFile} from 'node:fs/promises';
+import {setTimeout as delay} from 'node:timers/promises';
+import {checkPublic, loadDeployedRelease} from './public-health.mjs';
+
+const args=process.argv.slice(2);
+if(args.some(arg=>arg!=='--deployed'))throw Error('Usage: node scripts/check-public.mjs [--deployed]');
+let result;
+for(let attempt=1;attempt<=3;attempt++){
+  try{
+    const published=args.includes('--deployed')
+      ? await loadDeployedRelease({token:process.env.GH_TOKEN||''})
+      : {release:JSON.parse(await readFile('release.json','utf8'))};
+    result={...await checkPublic(published.release),hostingCommit:published.hostingCommit||process.env.GITHUB_SHA||null,checkedAt:new Date().toISOString()};
+    break;
+  }catch(error){
+    if(attempt===3)throw error;
+    console.error('Check '+attempt+' failed: '+error.message+'. Retrying in 5 seconds.');
+    await delay(5000);
   }
- }
 }
-const missing=await fetch(origin+'/__publication_check_missing__/',{signal:AbortSignal.timeout(15000)});
-if(missing.status!==404)throw new Error('Unknown routes must return 404, got '+missing.status);
-console.log('404 for an unknown route. HTTPS verified; no authentication used.');
+console.log(JSON.stringify(result,null,2));
+if(process.env.GITHUB_STEP_SUMMARY){
+  await appendFile(process.env.GITHUB_STEP_SUMMARY,`## Public access verified\n\nhttps://nixonbrazil.page/ — ${result.files} files match the deployed edition; HTTPS and custom 404 passed without authentication.\n\nChecked: ${result.checkedAt}\n\nHosting commit: ${result.hostingCommit}\n\nEditorial commit: ${result.sourceCommit}\n`);
+}
