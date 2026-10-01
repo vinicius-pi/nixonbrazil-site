@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "domain": "nixonbrazil.page",
+  "source_repository": "vinicius-pi/nixon-brasil",
+  "source_ref": "refs/heads/main",
+  "source_commit": "3a5f99f5001d2ed0405373f33522398cbae508e0",
+  "build": {
+    "method": "local",
+    "node": "v24.19.0",
+    "compiler": "@astrojs/compiler-binding-wasm32-wasi 0.4.1 (official optional backend)",
+    "checks": [
+      "astro check: 40 files, no diagnostics",
+      "astro build: 20 pages",
+      "scripts/verify-site.mjs: passed",
+      "npm test: 18 passed before the CSS-only archive fix",
+      "Edge: archive search/empty/reset, mobile menu, 13 routes, all homepage images passed after the CSS fix"
+    ],
+    "log_sha256": "771961b5952e4c9cc2dfcc43a8e1517f236c7e60571619551782572ad839b2db"
+  },
+  "files": {
+    "404.html": "0f4e2d0b99e4a192549897a0b01715c06b1e092db492be07db333d972cf9c83e",
+    "_astro/BaseLayout.BK5P8p4e.css": "8dc29bd8d589755a9b150281457668db85011422cfefa7b5ae381b5b6adf7e47",
+    "_astro/index.BkPE9oTx.css": "8f3dd976e3c0f32bd5359dd5832d1f4c1bdbd7d264ec9ee4f23557d0d7074400",
+    "acervo/comunicado-xangai/index.html": "82c192cbcdefab1eac6afc566fe855aca829f8a2458e724da27f0060e314b824",
+    "acervo/discurso-nomeacao-1968/index.html": "c06c760a4acd38749f8fb102735a92dc6a2b2204b9c140e639037f8c56614382",
+    "acervo/epa-origem/index.html": "76c2e673830c3297416811e37028ddb4baa44db045dcd933113a1435af2651e5",
+    "acervo/index.html": "8d5cb5c03fa82639a6db892978f7c5fe72f6dec0bcfe2f5cbd3582c522ec5153",
+    "acervo/nepa-1970/index.html": "afa0c40ce61e3df24378846a5088145f925d6236ad7e94945a180062e325b086",
+    "acervo/nixon-brasil-1972/index.html": "efd48ff2dc05be49c6832c392b68f48af3b4263367c46b90b30fd22affbe7267",
+    "artigos/abertura-china/index.html": "8b7fb6e35b2be45141def187a0f34836303fba93d4fc2d3e03bf41a1f912ab14",
+    "artigos/brasil-potencia-regional/index.html": "21ee0d6081873a68382fdf4202f20c56ec5ece74644aca94dd4e2ff7c5b9cdd0",
+    "artigos/estado-ambiental/index.html": "36c8b1faf154ea03bb34792a0d65696cb11006310ea14ac73ae5aa77bc37f96c",
+    "artigos/index.html": "f6c72f257f3096c39aa7f01ea9b94f909dc67240bd74ce331c0cd11c63afa3bd",
+    "artigos/maioria-silenciosa-1968/index.html": "43b2c406ce4452f265040c4b4ba54192e6af74632dd0fff746cbc76dca9f5227",
+    "artigos/salt-abm-detente/index.html": "e278f6460d65e97de208f8cf9a8f7da549b61a39f05ebe40a03b34a5c97c8ae9",
+    "assinar/index.html": "feb05ed40e95549b46f8a9ba926ef7ba35862d29a93d441e17cd5f426fb59215",
+    "biografia/index.html": "3a3afc70d360077229ffc496243b8926175f3fb001266c000293d8f38532eecc",
+    "brasil/index.html": "7d00ff5ba67418456fc767cbbdaf782c982a65b575b9b3f2cfc80275e009e60b",
+    "favicon.svg": "96ba54dc0d108456aec2b0e4d6011495df20b9564f276d745126ca75a78022c9",
+    "index.html": "f0b5381bc0559f72a1400cc017e9a248bc621447bde9a11269c47344dba059e5",
+    "politica-externa/index.html": "d0635fedb7344c8e94197db7667e76572204a166ee2e57671eddae629dcf738d",
+    "presidencia/index.html": "e6c599a46712565ed316a01d8075f5c4c8c841a5825be43e692fb9df39d2183c",
+    "robots.txt": "dec3fd0b553cbb267a4b669aed66d7f520d5fc345f2682944c8019f74af6c475",
+    "rss.xml": "658e56a97c4f7656477b66d68d4039dd6e743e99182ae7aaddfad14c54b71a6b",
+    "scripts/acervo.js": "e88100002e6c54b9f082b0ae29e84d9a62e316fd2f50ca52bf8f1d7c68faed5b",
+    "scripts/assinar.js": "f094ab3653cd494dc325894fa3e7d5f306c4e9c7c0500185ccc02ac0f7fa2b00",
+    "sitemap.xml": "14baa696c7cf752b47f8fb980e5495ef1d8cc412343311d436ffd04baafcb8f5",
+    "sobre/index.html": "767c3146b932e7e3c04753c3fb15c8e97419c39f90ad966ae9d0ace7a3ce970c"
+  }
+}
