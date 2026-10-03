@@ -1,6 +1,28 @@
-# nixonbrazil — publicação pública
+# nixonbrazil — Richard Nixon em português
 
-Endereço: **https://nixonbrazil.page/**
+**[Visite nixonbrazil.page](https://nixonbrazil.page/)**
+
+Criado em 2025, o nixonbrazil é uma publicação histórica brasileira independente
+dedicada à vida, às ideias e à Presidência de Richard Nixon. Reúne ensaios em
+português, um acervo de documentos e um olhar brasileiro sobre as relações entre
+os dois países.
+
+O projeto combina três frentes de trabalho:
+
+- **Pesquisa e escrita:** consulta à Nixon Library/NARA, ao *Foreign Relations of
+  the United States* e a registros oficiais, com referências e acesso às fontes.
+- **Design editorial:** composição sóbria, tipografia serifada, marinho e vermelho
+  contido, fotografias de arquivo e páginas adaptadas a telas menores.
+- **Desenvolvimento web:** geração estática com Astro, HTML, CSS e JavaScript;
+  busca e filtros no acervo, RSS, sitemap e publicação pelo GitHub Pages.
+
+Este repositório apresenta a edição pública gerada e os controles de publicação.
+O projeto é independente, sem vínculo oficial com a Richard Nixon Foundation,
+a Richard Nixon Presidential Library ou a NARA.
+
+## Publicação e manutenção
+
+### Edição pública
 
 Este repositório hospeda a edição estática pública do nixonbrazil. Deve permanecer
 **público**: o plano atual do GitHub não oferece Pages para repositórios privados.
