@@ -3,7 +3,7 @@
   "domain": "nixonbrazil.page",
   "source_repository": "vinicius-pi/nixon-brasil",
   "source_ref": "refs/heads/main",
-  "source_commit": "6e6fd1bfc641821660e41720e7013e48fd5a8061",
+  "source_commit": "646315bab0ce34ed97f0b8a191f65c9923ed32f0",
   "build": {
     "method": "local",
     "node": "v24.19.0",
@@ -13,29 +13,29 @@
       "astro check: 40 files, no diagnostics",
       "astro build: 20 pages",
       "scripts/verify-site.mjs: passed",
-      "Edge polish: 120 viewport checks, 20 pages at 200% text, 65 internal destinations, 37 external links, images, archive, RSS, dates and keyboard flows passed"
+      "Edge final copy preview: 10 affected pages, 30 desktop/mobile/enlarged-text checks; no overflow or JavaScript errors; available versions and retained resignation chronology verified"
     ],
-    "log_sha256": "3e7548342d1d5bc480027674e79f1b37c1bf0f5dee9ccb28cf93d2efbb767eee",
+    "log_sha256": "c0553c3c8029f033d41731f3c81fe93e31c21b0c5942f9ab9a57ce1179965de8",
     "audit_status": "Unchanged CI npm audit fails: http-cache-semantics 4.2.0 has no published patch; build-only module is not part of the static artifact. Dependencies and audit gate preserved."
   },
   "files": {
-    "404.html": "7c39de85a8111390641df8e20f5e716f7541cf3726e734c3adde875716df5788",
+    "404.html": "ab3201c6d9d6f9e0e7806f8d6fe97101baf5fb84205b54ee1d17b3636ddba554",
     "_astro/BaseLayout.DHwUXXSA.css": "9aee7dac217e1f4cac7bd7d0819ad27ebc264f46277302698dd4c6ec8f74254b",
     "_astro/index.BkPE9oTx.css": "8f3dd976e3c0f32bd5359dd5832d1f4c1bdbd7d264ec9ee4f23557d0d7074400",
-    "acervo/comunicado-xangai/index.html": "e36be128e5c7c1a362670cd17c181daf97229d631dfc358f25755964dd01e75d",
-    "acervo/discurso-nomeacao-1968/index.html": "9bd47ec5dd6d5ca76195c8379c56b380da1e48fdd2ec8b12d8a106bd5e75a659",
-    "acervo/epa-origem/index.html": "76ab1fb32b7f6cea03aaae574b7ae628ed0195be6808308d14da43db4e66b472",
-    "acervo/index.html": "f61fb31fba300e5286847133a9d6280cf6aaee8c16ee4aa41d71612f3f2cb4d4",
-    "acervo/nepa-1970/index.html": "82f681c53a93dd8a8b34d4ee65aa6f5eae42680376205e663fa8b39dc5039dbb",
-    "acervo/nixon-brasil-1972/index.html": "e371e923cdd1af868cf32b4756a1bff9d128ff1957aa403253ff064189875b09",
+    "acervo/comunicado-xangai/index.html": "714664e0c0e7d1257d256f77f76a0a6d9f2a0f2b61ed9f868e26a60d3f13b9e6",
+    "acervo/discurso-nomeacao-1968/index.html": "4a9a69b08630a41379543df1678af098a431fe6fa2db6e8112e27450606d26f5",
+    "acervo/epa-origem/index.html": "e2bcc40bd7de4e2172b2b93a9325ce386e3b2c7588558f64a87b3663705cd36c",
+    "acervo/index.html": "f28b1b83cfc2d20c4fcd2975f26e13c88f61eb7755430ee5fc8745a086f0f2f3",
+    "acervo/nepa-1970/index.html": "6b8c70b4180f3364ec00b9f9313572d8dcc270e3e866ee2757dd52d4164edfff",
+    "acervo/nixon-brasil-1972/index.html": "01230feabdfbd52487808f5a573ad27edbd180d483ca55dace5d903b490c7ee6",
     "artigos/abertura-china/index.html": "dea38b3a0f7e4e90b17f36c48fbf266dac07ef9091ee2342cf00c49dc5a55c09",
     "artigos/brasil-potencia-regional/index.html": "2309fde96b49c0ac02484baefc3d8bf9554811a5655de38c9ed7ba42134f479c",
-    "artigos/estado-ambiental/index.html": "2d9fc089822be07a5e9b4853f6b11c612439961902b6bb604660778e21e94817",
+    "artigos/estado-ambiental/index.html": "0467712ad6cd112bac0f697baf76506d78cfd80d864f4d481e38a1f3cda86cb9",
     "artigos/index.html": "6207e74198f49ff46a922d7ba253f2b062a1a84816b75d64b7c0cd21eedb5994",
     "artigos/maioria-silenciosa-1968/index.html": "42cd1950a72b09c87830c9109e15a96d86996fc859aff441dad3628bb19d1eee",
     "artigos/salt-abm-detente/index.html": "4c8478e688a27fedd4fbc2475e71b50334ba53c02692c1fc5c8d248b7f4d06a4",
     "assinar/index.html": "64d8e3d3715078650a45bf3385620be0c40370c8ab83db4957699689851a72a1",
-    "biografia/index.html": "1379817c505e1ed8db6e9d41694299b16b327fd7df6094f99d7d9247a7d0e2b7",
+    "biografia/index.html": "fd0d2a049f08bfb78dfabf5cf9212c182a9aad7dae9971649d022e1e6e4304cf",
     "brasil/index.html": "27d979d999f51f1b1cbd3a1323121f2f033d7927bfc57edb07a8fbc455d20170",
     "favicon.svg": "96ba54dc0d108456aec2b0e4d6011495df20b9564f276d745126ca75a78022c9",
     "index.html": "10dba1d07163bdd8ab2f37e14d5d55ca6618431c4c1b329767d75317707ed420",
@@ -46,6 +46,6 @@
     "scripts/acervo.js": "789f6ab249c11ea4a0d9476af3fc1c71f878ad6c077c40620c884237741deb20",
     "scripts/assinar.js": "f094ab3653cd494dc325894fa3e7d5f306c4e9c7c0500185ccc02ac0f7fa2b00",
     "sitemap.xml": "14baa696c7cf752b47f8fb980e5495ef1d8cc412343311d436ffd04baafcb8f5",
-    "sobre/index.html": "bb7a93e864741c521e7c6f70727eeefff4733a8a6ff63dce3431e909c44d46f1"
+    "sobre/index.html": "147ad870c85b27c2602a0878da13beb51001e40fc84e694d4f428154c6134230"
   }
 }
