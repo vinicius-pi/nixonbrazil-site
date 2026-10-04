@@ -3,16 +3,16 @@
   "domain": "nixonbrazil.page",
   "source_repository": "vinicius-pi/nixon-brasil",
   "source_ref": "refs/heads/main",
-  "source_commit": "b6d18ea7100a38c3f968961c22663512f907b2fc",
+  "source_commit": "f620a5797a2918a711e36275684e20af037898b9",
   "build": {
     "method": "github-actions",
-    "run_id": 37193213373,
-    "run_url": "https://github.com/vinicius-pi/nixon-brasil/actions/runs/37193213373",
+    "run_id": 37193809030,
+    "run_url": "https://github.com/vinicius-pi/nixon-brasil/actions/runs/37193809030",
     "checks": [
       "CI: authority, dependency audit, all existing test groups, Astro build and publication gates passed",
       "Local: 18 existing tests; 20-page build and verification passed",
-      "Presidency: 4 browser checks, desktop/mobile/enlarged text; anchors and current copy verified; no overflow or JavaScript errors",
-      "New policy passage reviewed against cited primary documents",
+      "Biography: 4 browser checks, desktop/mobile/enlarged text; anchors, current copy and link to Presidency verified; no overflow or JavaScript errors",
+      "New biography passage reviewed against cited primary documents",
       "Actual extracted CI package: 4 browser checks with active CSP passed; 27 files byte-identical to local preview, assinar.js differs only in CRLF"
     ]
   },
@@ -33,7 +33,7 @@
     "artigos/maioria-silenciosa-1968/index.html": "5643d93d520ec0df99f7282e3b8ca5501ea1814527c6ea7bbc17debb15d33641",
     "artigos/salt-abm-detente/index.html": "d5edf287119f50e0b363ddf8a90279102c5d382e30777c06bafd39fac9d77160",
     "assinar/index.html": "d08202a1b505b39f7be16be829da76e963bb280410f9f30e94ffa30a564183d7",
-    "biografia/index.html": "49c62c834affcdf15084238c980c6a3fa6f3ca4d9478e1c3438344473d7eef4c",
+    "biografia/index.html": "5d8f11f93cb70692ef08241d56c437fc3504b8bd6d2ce4f6da74f080ec22e6e9",
     "brasil/index.html": "3e76958529775bd224c77c19b588cc3fb162a77d99b44d19f65deddd5d435908",
     "favicon.svg": "96ba54dc0d108456aec2b0e4d6011495df20b9564f276d745126ca75a78022c9",
     "index.html": "66ef7e7168b506a35068c0ba52d45ee501ce0d38f705c52171229c9f73760df9",
