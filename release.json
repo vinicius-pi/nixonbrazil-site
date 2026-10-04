@@ -3,16 +3,16 @@
   "domain": "nixonbrazil.page",
   "source_repository": "vinicius-pi/nixon-brasil",
   "source_ref": "refs/heads/main",
-  "source_commit": "165faa5bffc241d16b893f9516543e81cd5a3426",
+  "source_commit": "b6d18ea7100a38c3f968961c22663512f907b2fc",
   "build": {
     "method": "github-actions",
-    "run_id": 37192657321,
-    "run_url": "https://github.com/vinicius-pi/nixon-brasil/actions/runs/37192657321",
+    "run_id": 37193213373,
+    "run_url": "https://github.com/vinicius-pi/nixon-brasil/actions/runs/37193213373",
     "checks": [
       "CI: authority, dependency audit, all existing test groups, Astro build and publication gates passed",
       "Local: 18 existing tests; 20-page build and verification passed",
-      "Biography: 4 browser checks, desktop/mobile/enlarged text; anchors and current copy verified; no overflow or JavaScript errors",
-      "New biography episodes reviewed against cited historical sources",
+      "Presidency: 4 browser checks, desktop/mobile/enlarged text; anchors and current copy verified; no overflow or JavaScript errors",
+      "New policy passage reviewed against cited primary documents",
       "Actual extracted CI package: 4 browser checks with active CSP passed; 27 files byte-identical to local preview, assinar.js differs only in CRLF"
     ]
   },
@@ -38,7 +38,7 @@
     "favicon.svg": "96ba54dc0d108456aec2b0e4d6011495df20b9564f276d745126ca75a78022c9",
     "index.html": "66ef7e7168b506a35068c0ba52d45ee501ce0d38f705c52171229c9f73760df9",
     "politica-externa/index.html": "4a94fe40eab34496abafc31f2b2b17fa61f69f450be705225b90438e5b8ec76c",
-    "presidencia/index.html": "509c9ef00516de8e055867e00a464c4f05fb351ec8773d9c8b388d7f83370e16",
+    "presidencia/index.html": "d62fc0a9b419db86629cd4b8c03d9032fcd5ff9384899b03434295e17aa77c93",
     "robots.txt": "dec3fd0b553cbb267a4b669aed66d7f520d5fc345f2682944c8019f74af6c475",
     "rss.xml": "7be49f00ba36a001f71dc1a81d81b62c08857c9d010351fd45a479b52681d78c",
     "scripts/acervo.js": "789f6ab249c11ea4a0d9476af3fc1c71f878ad6c077c40620c884237741deb20",
