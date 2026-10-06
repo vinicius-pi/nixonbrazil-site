@@ -33,8 +33,9 @@ projeto editorial. O verificador confere a lista, os bytes e os hashes do pacote
 e também procura marcadores conhecidos de conteúdo privado. Isso reduz o risco
 de vazamento, mas não substitui a revisão editorial humana.
 
-`release.json` declara a versão da fonte, a execução de Actions e os hashes dos
-arquivos. Esses campos permitem conferir a consistência do registro, mas não são
+`release.json` declara a versão da fonte, uma URL de execução coerente com o
+respectivo `run_id` e os hashes dos arquivos. Esses campos permitem conferir a
+consistência do registro, mas não são
 uma attestation criptográfica da relação entre o repositório privado e este
 pacote; a execução de origem e o diff ainda precisam ser conferidos no fluxo de
 publicação. Não incluir rascunhos, relatórios internos, credenciais nem o

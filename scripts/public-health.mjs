@@ -9,6 +9,13 @@ export function validateRelease(release) {
       release.source_repository !== 'vinicius-pi/nixon-brasil' ||
       release.source_ref !== 'refs/heads/main' || !/^[a-f0-9]{40}$/.test(release.source_commit) ||
       !['local', 'github-actions'].includes(release.build?.method)) throw Error('Invalid release identity');
+  if (release.build.method === 'github-actions' && (
+    !Number.isSafeInteger(release.build.run_id) ||
+    release.build.run_id <= 0 ||
+    release.build.run_url !== `https://github.com/vinicius-pi/nixon-brasil/actions/runs/${release.build.run_id}` ||
+    !Array.isArray(release.build.checks) ||
+    release.build.checks.length === 0
+  )) throw Error('Invalid source build evidence');
   if (!release.files || Array.isArray(release.files) || typeof release.files !== 'object') throw Error('Invalid file manifest');
   const paths = Object.keys(release.files);
   if (!paths.length || paths.length > 5000) throw Error('Invalid publication size');
