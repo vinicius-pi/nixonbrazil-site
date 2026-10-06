@@ -22,7 +22,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Testar a verificação, incluindo respostas incorretas
-        run: node --test scripts/health-check.test.mjs
+        run: node --test scripts/health-check.test.mjs scripts/public-content-gate.test.mjs
       - name: Conferir a edição realmente publicada
         env:
           GH_TOKEN: ${{ github.token }}

@@ -39,6 +39,8 @@ jobs:
           persist-credentials: false
       - name: Conferir pacote e origem
         run: node scripts/verify-package.mjs
+      - name: Conferir ausência de conteúdo privado
+        run: node scripts/public-content-gate.mjs
       - name: Testar a verificação de acesso
         run: node --test scripts/health-check.test.mjs
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5

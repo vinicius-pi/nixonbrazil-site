@@ -28,11 +28,17 @@ Este repositório hospeda a edição estática pública do nixonbrazil. Deve per
 **público**: o plano atual do GitHub não oferece Pages para repositórios privados.
 A privacidade do trabalho editorial não torna o site uma publicação privada.
 
-Os arquivos de `site/` vêm exclusivamente de uma compilação verificada da
-branch `main` do projeto editorial. Não incluir rascunhos, relatórios internos,
-credenciais nem o histórico editorial neste repositório de publicação.
+Os arquivos de `site/` devem vir da compilação aprovada da branch `main` do
+projeto editorial. O verificador confere a lista, os bytes e os hashes do pacote
+e também procura marcadores conhecidos de conteúdo privado. Isso reduz o risco
+de vazamento, mas não substitui a revisão editorial humana.
 
-`release.json` identifica a versão aprovada da fonte e os hashes dos arquivos.
+`release.json` declara a versão da fonte, a execução de Actions e os hashes dos
+arquivos. Esses campos permitem conferir a consistência do registro, mas não são
+uma attestation criptográfica da relação entre o repositório privado e este
+pacote; a execução de origem e o diff ainda precisam ser conferidos no fluxo de
+publicação. Não incluir rascunhos, relatórios internos, credenciais nem o
+histórico editorial neste repositório de publicação.
 Antes de publicar, execute `node scripts/verify-package.mjs`. Depois de sincronizar
 a `main`, acione **Publicar edição verificada** em Actions. O fluxo publica somente
 `site/` e testa o endereço público sem autenticação. Um push não publica sozinho.
