@@ -34,10 +34,10 @@ e também procura marcadores conhecidos de conteúdo privado. Isso reduz o risco
 de vazamento, mas não substitui a revisão editorial humana.
 
 `release.json` declara a versão da fonte, uma URL de execução coerente com o
-respectivo `run_id` e os hashes dos arquivos. Esses campos permitem conferir a
-consistência do registro, mas não são
-uma attestation criptográfica da relação entre o repositório privado e este
-pacote; a execução de origem e o diff ainda precisam ser conferidos no fluxo de
+respectivo `run_id` e os hashes dos arquivos. Eles permitem conferir que o
+pacote não mudou depois da revisão e que o registro é coerente. Sozinhos, porém,
+não provam que o pacote foi gerado a partir do commit privado indicado; essa
+relação ainda precisa ser conferida na execução de origem e no diff do fluxo de
 publicação. Não incluir rascunhos, relatórios internos, credenciais nem o
 histórico editorial neste repositório de publicação.
 Antes de publicar, execute `node scripts/verify-package.mjs`. Depois de sincronizar
